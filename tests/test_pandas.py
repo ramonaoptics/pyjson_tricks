@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*-
 
 from collections import OrderedDict
+from ro_json import dumps, loads
+from tests.test_bare import nonpdata
+import pytest
+pytest.importorskip('pandas')
+pytest.importorskip('numpy')
 from numpy import linspace, isnan
 from numpy.testing import assert_equal
 from pandas import DataFrame, Series
-from ro_json import dumps, loads
-from tests.test_bare import nonpdata
-
 
 COLUMNS = OrderedDict((
 	('name', ('Alfa', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf',

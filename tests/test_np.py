@@ -10,6 +10,10 @@ from warnings import catch_warnings, simplefilter
 from _pytest.recwarn import warns
 from datetime import datetime, timezone
 
+import pytest
+
+pytest.importorskip('numpy')
+
 from numpy import arange, ones, array, array_equal, finfo, iinfo, pi
 from numpy import int8, int16, int32, int64, uint8, uint16, uint32, uint64, \
 	float16, float32, float64, complex64, complex128, zeros, ndindex, \
