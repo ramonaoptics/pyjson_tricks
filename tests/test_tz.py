@@ -9,6 +9,8 @@ work with just Python code functionality, and are tested in `nonp`.
 from datetime import datetime, date, time, timedelta, timezone
 from ro_json import dumps, loads
 from ro_json.utils import is_py3
+import pytest
+pytest.importorskip('pytz')
 import pytz
 
 
